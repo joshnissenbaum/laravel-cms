@@ -1,0 +1,148 @@
+ 
+<?php $__env->startSection('content'); ?>
+<div class="listing-post">
+    <div class="grey-bg-hdr" style="padding: 0; padding-left: 10px; padding-right: 3px;">
+        <div class="main-header">
+            <a href="<?php echo URL::previous(); ?>"><h1>Classifieds &middot;&nbsp;</a></h1>
+        </div>
+    </div>
+    <div class="grey-bg-hdr" style="padding: 0; background: none;">
+        <div class="main-header">
+            <h1>&nbsp;<?php echo $classified->name; ?></h1>
+        </div>
+    </div>
+    <?php if(Auth::check() && $classified->user_id == Auth::user()->id): ?>
+            <a href="<?php echo URL::route('listing.edit', array('id' => $classified->id)); ?>"><button class="btn btn-primary" type="button" style="float: right; margin-right: 5px;"><span class="glyphicon glyphicon-pencil"></span></button></a>
+        <?php endif; ?>
+    <hr style="margin-bottom: 0; margin-top: -5px;">
+    <table class="listing-post-top">
+        <tr>
+            <th><img width="20px" height="auto" src="<?php echo asset('images/cat.svg')?>"></th>
+            <th style="font-size: 16px; padding-left: 5px;"><?php echo $classified->category->name; ?></th>
+        </tr>
+        <tr>
+            <td><img width="20px" height="auto" src="<?php echo asset('images/pin.svg')?>"></td>
+            <?php $location = Location::find($classified->location); ?>
+                <td style="font-size: 16px; font-weight: bold; padding-left: 5px;"><?php echo $location->suburb; ?>, <?php echo $location->state; ?> <?php echo $location->postcode; ?></td>
+        </tr>
+    </table>
+    <hr>
+    <div class="listing-post-wrapper">
+        <ul class="pgwSlideshow">
+            <?php foreach(ClassifiedPhoto::where('classified_id', '=', $classified->id)->get() as $photo): ?>
+            <li><img src="<?php echo asset($photo->getPhoto($photo->photo_id)->mid)?>"></li>
+            <?php endforeach; ?>
+        </ul>
+        <div class="details-wrapper">
+            <div class="column-widget">
+                <header class="header">
+                    <h2>Details</h2></header>
+            </div>
+            <table class="details-inner" style="width: 50%;">
+                <tr>
+                    <th><span class="detail">Price:</span></th>
+                    <th><span class="value">$<?php echo $classified->price; ?></span></th>
+                </tr>
+                <tr>
+                    <th><span class="detail">Condition:</span></th>
+                    <th><span class="value"><?php echo $classified->item_condition; ?></span></th>
+                </tr>
+                <tr>
+                    <th><span class="detail">Posted by:</span></th>
+                    <th><span class="value"><?php echo $classified->poster_name; ?> &middot; <a href="<?php echo URL::route('profile', array('username' => $classified->owner->username)); ?>">(View Profile)</a></span></th>
+                </tr>
+                <tr>
+                    <th><span class="detail">Contact Number:</span></th>
+                    <th><span class="value">
+                    <?php if($classified->number_public == 1): ?>
+                    <?php echo $classified->phone_number; ?>
+
+                    <?php else: ?>
+                    <?php
+                    for($i = 0; $i < strlen($classified->phone_number)-3; $i++) {
+                    echo'X';
+                    } ?>
+                    <?php echo substr($classified->phone_number, -3); ?> (Show Number)
+                    <?php endif; ?>
+                    </span></th>
+                </tr>
+                <tr>
+                    <th><span class="detail">Contact Email:</span></th>
+                    <th><span class="value"><?php if($classified->email_public == 1): ?> <?php echo $classified->email; ?> <?php else: ?> The poster has hidden their email address. <?php endif; ?></span></th>
+                </tr>
+            </table>
+        </div>
+
+        <div class="details-wrapper" style="padding-top: 10px;">
+            <div class="column-widget">
+                <header class="header">
+                    <h2>Description</h2></header>
+            </div>
+            <span class="desc"><p style="margin-top: 5px;"><?php echo nl2br(BBCode::parse($classified->description)); ?></p></span>
+        </div>
+
+        <hr>
+        <iframe style="margin-top: 15px;" src="https://www.google.com/maps/embed/v1/place?q=<?php echo $location->suburb; ?>, <?php echo $location->state; ?> <?php echo $location->postcode; ?>&zoom=12&key=AIzaSyADO9jTPFrStLLnHAX7r9Ynf3UOxUu2s1M" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="column-widget" style="margin-top: 15px;">
+            <header class="header">
+                <h2>You may also be interested in...</h2></header>
+        </div>
+        <?php
+        $radius = Location::getLocationsInRadius($classified->dblocation->lat, $classified->dblocation->lon, 20);
+        $results = Classified::whereRaw("MATCH(name) AGAINST(?)", array($classified->name))->whereIn('location', array_pluck($radius, 'id'))->where('id', '!=', $classified->id)->take(3)->get();
+        ?>
+            <?php if($results->count() == 0): ?> No similar classifieds found. <?php endif; ?>
+            <?php foreach($results as $result): ?>
+            <a href="<?php echo URL::route('listing', array('id' => $result->id)); ?>">
+                <div class="clsfs-item" style="margin-top: 10px;">
+                    <div class="clsfs-headerbox">
+                        <?php echo $result->name; ?>
+
+                        <span style="float: right; font-size: 14px; ">Posted by <?php echo $result->owner->name; ?> on <?php echo $result->created_at->format('d/m/Y'); ?></span>
+                    </div>
+                    <div class="clsfs-datacontainer">
+                        <div class="clsfs-photo">
+                            <div class="clsfs-photo-inner" style="background-image: url('<?php echo asset($result->getPhoto($result->id)->mid)?>');"></div>
+                        </div>
+                        <div class="clsfs-info">
+
+                            <div class="clsfs-info-col">
+                                <img src="../images/status.svg" width="20" height="20">
+                            </div>
+                            <div class="clsfs-info-col">
+                                <?php echo $result->item_condition; ?>
+
+                            </div>
+                            <div class="clsfs-info-ro"></div>
+                            <div class="clsfs-info-col">
+                                <img src="../images/price-tag.svg" width="20" height="20">
+                            </div>
+                            <div class="clsfs-info-col">
+                                $<?php echo $result->price; ?>
+
+                            </div>
+                            <div class="clsfs-info-ro"></div>
+                            <div class="clsfs-info-col">
+                                <img src="../images/world-location.svg" width="20" height="20">
+                            </div>
+                            <div class="clsfs-info-col">
+                                <?php $location = Location::find($result->location); ?>
+                                    <?php echo $location->suburb; ?>, <?php echo $location->state; ?> <?php echo $location->postcode; ?>
+
+                            </div>
+                            <div class="clsfs-info-ro"></div>
+                            <div class="clsfs-desc">
+                                <?php echo $result->brief_desc; ?>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <?php endforeach; ?>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

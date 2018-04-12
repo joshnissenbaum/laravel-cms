@@ -1,0 +1,14 @@
+<?php if($threads->count() > 0): ?>
+        <?php foreach($threads as $thread): ?>
+        <?php $class = $thread->isUnread($currentUserId) ? 'alert-info' : ''; ?>
+        <div class="media alert <?php echo $class; ?>">
+            <a href="<?php echo URL::route('messages.show', array('username' => $user->username, 'id' => $thread->id)); ?>">
+                <h4 class="media-heading"><?php echo $thread->creator()->name; ?></h4>
+                <p><small><strong>Participants:</strong> <?php echo $thread->participantsString(Auth::id()); ?></small></p>
+            </a>
+            <p><?php echo $thread->latestMessage->body; ?></p>
+        </div>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <p>Sorry, no threads.</p>
+    <?php endif; ?>    

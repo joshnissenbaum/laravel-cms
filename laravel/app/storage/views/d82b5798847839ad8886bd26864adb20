@@ -1,0 +1,43 @@
+<?php $__env->startSection('content'); ?>
+<?php
+$user = User::where('username', '=', $username)->first();
+?>
+<div class="profile">
+    
+    <div class="profile-cover-img" style="background-image: url('<?php echo asset($user->getPhoto($user->cover_photo)->large.'')?>');">
+    <div class="profile-name">
+    <?php echo $__env->make('profile.profile-name', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div> 
+    </div>
+    <div class="row writer">
+        <div class="col-md-4">
+            <?php echo $__env->make('profile.writer.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        </div>
+        
+        <div class="col-md-8">
+            <?php if($nav == 'profile.writer.home') { ?>
+            <div class="column-widget" style="margin-bottom: 5px;">
+                <header class="header" style="margin-bottom: 0; padding: 0;"><h2 style="font-size: 16px;"><span class="glyphicon glyphicon-inbox"></span>&nbsp; Submission Center</h2></header>
+            </div>
+            <?php echo $__env->make('profile.writer.center', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            
+            <?php } ?>
+        
+            <?php if($nav == 'profile.writer.new') { ?>
+            <div class="column-widget" style="margin-bottom: 5px;">
+                <header class="header" style="margin-bottom: 0; padding: 0;"><h2 style="font-size: 16px;"><span class="glyphicon glyphicon-bullhorn"></span>&nbsp; Post an Article</h2></header>
+            </div>
+            <?php echo $__env->make('profile.writer.new', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php } ?>
+                    
+             <?php if($nav == 'profile.writer.faq') { ?>
+            <div class="column-widget" style="margin-bottom: 5px;">
+                <header class="header" style="margin-bottom: 0; padding: 0;"><h2 style="font-size: 16px;"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp; FAQ & Support</h2></header>
+            </div>
+            <?php echo $__env->make('profile.writer.faq', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

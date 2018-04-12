@@ -1,0 +1,25 @@
+<div class="profile-data" style="padding-left: 0; font-size: 15px;">
+    <p></p>
+    <strong>Q: How long will it take for my post to be reviewed?<br></strong>
+    <strong>A:</strong> It can take anywhere from a few hours to a few days for your post to be reviewed.
+    The best way to know when we have reviewed your post is to keep checking the submission center.
+    <p></p>
+    <strong>Q: My article has 'reviewed' on it, now what?<br></strong>
+    <strong>A:</strong>
+    Once your post has been reviewed by an administrator it will display in a light blue box and say 'reviewed'.
+    If this has happened, we require additional information from you or would like you to change something about the article before we publish it globally.
+    The administrator who is reviewing your article <strong>will be in contact through the email address listed on your profile</strong>. So keep an eye out!
+    <p></p>
+    <strong>Q: My article has been declined. Why has this happened?<br></strong>
+    <strong>A:</strong>
+    Usually we don't tend to decline articles; we always try to see if the user can provide us with more information, images or videos to make the article better first. If your article has been
+    gone straight to declined then this is for obvious reasons!
+    <p></p>
+    <span style="font-size: 20px; font-weight: bold;">Support</span>
+    <hr>
+    <span style="display: block; padding-top: 7px;">
+    We have tried to simplify the article posting process as much as possible. If you do have any questions or concerns feel free to contact us and we will respond as quickly as possible.
+    <p></p>If you have anything to share then head over to the <a href="<?php echo URL::route('profile.writer.new', array($username => Auth::user()->username)); ?>">New Submission</a> page.
+    It is very important that you follow the instructions before each field; <strong>we don't want inappropriate titles or low quality images</strong>.</span>
+
+</div>

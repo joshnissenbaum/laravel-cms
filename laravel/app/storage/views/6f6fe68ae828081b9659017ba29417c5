@@ -1,0 +1,58 @@
+<?php $__env->startSection('content'); ?>
+<div class="profile">
+    
+    <div class="profile-cover-img" style="background-image: url('<?php echo asset($user->getPhoto($user->cover_photo)->large.'')?>');">
+    <div class="profile-name">
+       <?php echo $__env->make('profile.profile-name', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div> 
+    </div>
+    <div class="profile-inner">
+        <div class="profile-img" style=" background-image: url('<?php echo asset($user->getPhoto($user->profile_photo)->mid.'')?>');"></div>
+        <div class="profile-data">
+             <div class="column-widget" style="margin-bottom: 5px;">
+                <header class="header" style="margin-bottom: 0; padding: 0;"><h2 style="font-size: 16px;">Profile Info</h2></header>
+            </div>
+            <b>Join Date:</b> <?php echo $user->created_at->format('F j Y'); ?><br>
+            <b>Last Online:</b> <?php echo $user->updated_at->format('F j Y'); ?><br>
+            <b>Forum Posts:</b> <?php echo ForumPost::where('user_id', '=', $user->id)->count(); ?><br>
+            <b>Published Articles:</b> <?php echo Article::where('author_id', '=', $user->id)->count(); ?><br>
+            <p></p>
+             <div class="column-widget" style="margin-bottom: 5px;">
+                <header class="header" style="margin-bottom: 0; padding: 0;"><h2 style="font-size: 16px;">Contact Info</h2></header>
+            </div>
+            <?php
+            if($user->privacy->email_public == 1)
+            {
+                echo'<b>Email Address:</b> '.$user->email.'<br>';
+            }
+            else
+            {
+                echo'<b>Email Address:</b> Hidden<br>';
+            }
+            ?>
+            <?php
+            if($user->privacy->website_public == 1)
+            {
+                echo'<b>Website:</b> <a target="_blank" href="'.$user->website.'"> '.$user->website.'</a><br>';
+            }
+            else
+            {
+                echo'<b>Website:</b> Hidden<br>';
+            }
+            if(Auth::check() && Auth::user()->id != $user->id && $user->privacy->messages == 1)
+            {
+                echo'Send a message to '.$user->username.'';
+            }
+            ?>
+            
+            <div class="badges">
+              <?php foreach(UserBadge::where('user_id', '=', $user->id)->get() as $badge): ?>
+               <span class="label"  data-toggle="tooltip" data-placement="bottom" title="<?php echo $badge->badge->description; ?>" style="background-color: <?php echo $badge->badge->colour; ?>"><?php echo $badge->badge->name; ?></span> 
+              <?php endforeach; ?>
+            </div>
+            </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,33 @@
+<?php
+    $conversations = Conversation::forUser(Auth::user()->id)->latest('updated_at')->get();
+?>
+<?php if($conversations->count() == 0): ?>
+    <div class="alert alert-info">
+    <span class="glyphicon glyphicon-info-sign"></span>&nbsp; You have not sent or recieved any messages yet.</div>
+<?php endif; ?>
+<?php foreach($conversations as $convo): ?>
+ <a class="message-thread" href="<?php echo URL::route('messages.show', ['username' => $user->username, 'id' => $convo->id]); ?>">
+    <div class="media" <?php if(isset($convo_id) && $convo_id == $convo->id): ?> style="background-color: #337ab7; padding: 10px; " <?php else: ?> style="padding: 10px; background-color: #CACACA;" <?php endif; ?> >
+      <div class="media-left">
+          <span class="glyphicon glyphicon-comment"></span>
+      </div>
+      <div class="media-body">
+         <h4 class="media-heading" style="font-size: 16px;">
+         <?php foreach($convo->participant as $participant): ?>
+             <?php if($participant->user->id != Auth::user()->id): ?>
+                <?php if($convo->participant->count() > 2): ?>
+                 <?php echo $participant->user->username; ?>,
+                 <?php else: ?>
+                 <?php echo $participant->user->username; ?>
+
+                 <?php endif; ?>
+             <?php endif; ?>
+         <?php endforeach; ?>
+        </h4>
+        <span class="last-sent" style="font-size: 14px;"><?php echo Str::limit($convo->getLatestMessage()->body, 100); ?></span>
+        <span class="date-sent" style="display: block; font-size: 13px; margin-top: 5px;"><span class="glyphicon glyphicon-time"></span>&nbsp; <?php echo $convo->getLatestMessage()->created_at->diffForHumans(); ?></span>
+      </div>
+    </div>
+</a>
+<hr style="margin-top: 5px; margin-bottom: 5px;">
+<?php endforeach; ?>

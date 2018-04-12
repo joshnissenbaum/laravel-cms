@@ -1,0 +1,52 @@
+<?php $__env->startSection('content'); ?>
+<?php $user = User::where('username', '=', $username)->first(); ?>
+<div class="profile">
+    <div class="profile-cover-img" style="background-image: url('<?php echo asset($user->getPhoto($user->cover_photo)->large.'')?>');">
+    <div class="profile-name">
+    <?php echo $__env->make('profile.profile-name', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div> 
+    </div>
+    <div class="profile-inner">
+    <div class="profile-data" style="padding-left: 0; padding-right: 0;">
+        <span class="header">Messages
+            <a href=""><button class="btn btn-primary" type="button" style="position: absolute; right: 0;">
+            <span class="glyphicon glyphicon-plus"></span>&nbsp; New Message</button></a>
+        </span><p></p>
+    <div class="row">
+        <div class="col-md-4">
+        <?php foreach(Message::where('to_user', '=', $user->id)->orderBy('created_at', 'DESC')->groupBy('from_user')->get() as $msg): ?>
+        <?php $convo_user = User::find($msg->from_user); ?>
+            <div class="media">
+              <div class="media-left">
+                  <img class="media-object" style="width: 50px; height: 50px;" src="<?php echo asset($convo_user->getPhoto($user->profile_photo)->thumb); ?>" alt="...">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading" style="font-weight: bold; font-size: 16px;"><?php echo $convo_user->username; ?></h4>
+                <?php echo $msg->message; ?>
+
+              </div>
+            </div>
+            <p></p><hr>
+        <?php endforeach; ?>
+        </div>
+        <div class="col-md-8">
+        <?php foreach(Message::where('to_user', '=', $user->id)
+            ->where('from_user', '=', $messages[0]->from_user)
+            ->orderBy('created_at', 'DESC')
+            ->get() as $msg): ?>
+            <div class="well" style="background-color: #CACACA; margin-bottom: 0;">
+            <strong><?php echo User::find($msg->from_user)->username; ?></strong><br>
+            <?php echo $msg->message; ?><p></p>
+            <?php echo $msg->created_at->format('j/m h:ma'); ?>
+
+            </div>
+            <p></p><hr><p></p>
+        <?php endforeach; ?>
+        <div class="reply-container"><textarea class="form-control" placeholder="Send a reply..."></textarea></div>
+        </div>
+    </div>        
+    </div>
+    </div>
+    </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

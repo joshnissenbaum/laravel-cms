@@ -1,0 +1,11 @@
+<?php if($user->privacy->show_name == 1): ?>
+<?php echo $user->name; ?>
+
+<?php else: ?>
+<?php echo $user->username; ?>
+
+<?php endif; ?>
+<hr>
+<div id="profile-buttons">
+    <?php echo $__env->make('profile.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</div>

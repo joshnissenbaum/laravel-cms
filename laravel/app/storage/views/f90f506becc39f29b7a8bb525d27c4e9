@@ -1,0 +1,47 @@
+<?php $__env->startSection('content'); ?>
+   <div class="create-thread">
+    <div class="row">
+        <div class="col-md-9">
+            <?php echo Form::open(array('action' => 'ForumController@quoteReply', 'files' => 'true')); ?>
+
+            <div class="grey-bg-hdr" style="padding: 0; padding-left: 10px; padding-right: 3px;">
+        <div class="main-header">
+            <h1><a href="<?php echo URL::route('forumpost', array('$id' => $thread->id, 'stripped_title' => $thread->stripped_title)); ?>"><?php echo $thread->title; ?> &middot;</a></h1>
+        </div>
+        </div>
+         <div class="grey-bg-hdr" style="padding: 0; background: none;">
+        <div class="main-header">
+            <h1>&nbsp; Reply</h1>
+        </div>
+       </div>
+        <hr>   
+          <?php if($errors->has()): ?>
+           <p></p>
+            <div class="alert alert-danger">
+                <?php foreach($errors->all() as $error): ?>
+                    <?php echo $error; ?><br>        
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+            <?php echo Form::hidden('thread', $thread->id); ?>
+
+            <div class="form-group" style="margin-top: -10px;">
+                <label for="exampleInputEmail1"></label>
+                <textarea id="summernote" name="body" class="form-control" placeholder="What do you want to say?">
+                    [quote] Originally posted by [b]<?php echo $post->author->username; ?>[/b]
+                    <?php echo $post->body; ?>[/quote]                  
+                </textarea>
+            </div><p></p>
+            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>&nbsp; Post Reply</button>
+            <?php echo Form::close(); ?>
+
+        </div>
+
+
+        <div class="col-md-3">
+            <?php echo $__env->make('misc.general-right-column', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

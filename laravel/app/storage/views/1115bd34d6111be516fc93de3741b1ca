@@ -1,0 +1,46 @@
+<?php $__env->startSection('content'); ?>
+<?php
+$user = User::where('username', '=', $username)->first();
+?>
+<div class="profile">
+    
+    <div class="profile-cover-img" style="background-image: url('<?php echo asset($user->getPhoto($user->cover_photo)->large.'')?>');">
+    <div class="profile-name">
+    <?php echo $__env->make('profile.profile-name', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div> 
+    </div> 
+    <div class="profile-inner">
+        <div class="profile-update">
+            <?php echo $__env->make('profile.writer.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        </div>
+        <div class="writer-container" style="padding-top: 10px; padding-left: 30px;">
+            <?php if($nav == 'profile.writer.home') { ?>
+            <h3>Submission Center</h3>
+            <hr>
+            <?php echo $__env->make('profile.writer.center', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            
+            <?php } ?>
+        
+            <?php if($nav == 'profile.writer.new') { ?>
+            <h3 style="font-size: 20px; ">Post an Article</h3>
+            <hr>
+            <?php echo $__env->make('profile.writer.new', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php } ?>
+            
+            <?php if($nav == 'profile.writer.newad') { ?>
+            <h3 style="font-size: 20px; ">Post a Classified</h3>
+            <hr>
+            <?php echo $__env->make('profile.writer.newad', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php } ?>
+            
+             <?php if($nav == 'profile.writer.faq') { ?>
+            <h3 style="font-size: 20px; ">FAQ & Support</h3>
+            <hr>
+            <?php echo $__env->make('profile.writer.faq', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php } ?>
+
+</div>
+</div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

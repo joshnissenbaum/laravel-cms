@@ -1,0 +1,31 @@
+<?php foreach(Message::where('to_user', '=', $user->id)
+->orWhere('from_user', '=', $user->id)
+->orderBy('created_at', 'DESC')
+->groupBy('from_user', 'to_user')
+->get() as $msg): ?>
+<?php
+$user1 = User::find($msg->from_user);
+$user2 = User::find($msg->to_user);
+if($user1->username == Auth::user()->username)
+{
+    $convo_user = $user2;
+}
+if($user2->username == Auth::user()->username)
+{
+    $convo_user = $user1;
+}
+?>
+    <a href="<?php echo URL::route('messages.conversation', array('username' => $user->username, 'id' => $convo_user->id)); ?>">
+        <div class="media" <?php if(isset($messages) && (isset($id) && $msg->from_user == $id || $msg->to_user == $id)): ?> style="background-color: #CACACA; padding: 10px;" <?php endif; ?> style="padding: 10px;">
+            <div class="media-left">
+                <img class="media-object" style="width: 50px; height: 50px;" src="<?php echo asset($convo_user->getPhoto($convo_user->profile_photo)->thumb); ?>" alt="...">
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading" style="font-weight: bold; font-size: 16px;"><?php echo $convo_user->username; ?></h4> <?php echo $msg->message; ?>
+
+            </div>
+        </div>
+    </a>
+    <p></p>
+    <hr>
+    <?php endforeach; ?>

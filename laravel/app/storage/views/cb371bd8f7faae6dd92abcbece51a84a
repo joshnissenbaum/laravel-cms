@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  minimum-scale=1.0, maximum-scale=1.0" />
+	<title>BMW E30 Australia</title>
+    <link href="<?php echo asset('css/bootstrap/bootstrap.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/jquery_ui/jquery-ui-1.10.0.custom.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/style.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/plugins/bootstrap-validator/bootstrapValidator.min.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/plugins/pgw/pgwslideshow.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/plugins/bootstrap-fileinput/fileinput.min.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/plugins/fontawesome/font-awesome.min.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/plugins/wysibb/default/wbbtheme.css')?>" rel="stylesheet">
+    <link href="<?php echo asset('css/plugins/select2/select2.css')?>" rel="stylesheet">
+    <link rel="shortcut icon" href="<?php echo asset('images/favicon.ico')?>">
+</head>
+<body>
+<div class="container">
+    <a href="<?php echo URL::route('home'); ?>"><div class="header"><img class="banner" src="<?php echo asset('images/banner.jpg')?>"></div></a>
+    <?php echo $__env->make('misc.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>  
+    <?php if(!Request::is('profile/*')): ?>    
+     <a href="http://bmw.com" target="_blank">
+     <div class="top-square"><div class="top-square-img" style="background-image: url(<?php echo asset('images/topsquare.jpg')?>)"></div></div>
+     </a>
+     <?php endif; ?>
+    <div class="section-wrapper">
+        <?php echo $__env->yieldContent('content'); ?>
+    </div>
+    <?php echo $__env->make('home.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('misc.sitemap', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div>
+    <script src="<?php echo asset('js/jquery/jquery-1.11.1.min.js')?>"></script>
+    <script src="<?php echo asset('js/bootstrap/bootstrap.min.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/bootstrap-fileinput/fileinput.min.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/wysibb/jquery.wysibb.min.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/pgw/pgwslideshow.min.js')?>"></script>
+    <script src="<?php echo asset('js/plugins/select2/select2.js')?>"></script>
+    <script src="<?php echo asset('js/misc/slider-init.js')?>"></script>
+    <script src="<?php echo asset('js/misc/summernote-init.js')?>"></script>
+    <script src="<?php echo asset('js/misc/click-reveal.js')?>"></script>
+    <script src="<?php echo asset('js/misc/main-hover.js')?>"></script>
+    <script src="<?php echo asset('js/user/login.js')?>"></script>
+    <script src="<?php echo asset('js/misc/facebook.js')?>"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<?php $__env->startSection('content'); ?>
+<?php $user = User::where('username', '=', $username)->first(); ?>
+<div class="profile">
+    
+    <div class="profile-cover-img" style="background-image: url('<?php echo asset($user->getPhoto($user->cover_photo)->large.'')?>');">
+    <div class="profile-name">
+       <?php echo $__env->make('profile.profile-name', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div> 
+    </div>
+    <div class="row">
+    
+    <div class="col-md-5">
+        <?php echo $__env->make('profile.messenger.threads', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        
+    </div>
+        
+        
+        <div class="col-md-7">
+            <div class="col-md-6">
+        <?php foreach($thread->messages as $message): ?>
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img src="//www.gravatar.com/avatar/<?php echo $message->user->email; ?>?s=64" alt="<?php echo $message->user->name; ?>" class="img-circle">
+                </a>
+                <div class="media-body">
+                    <h5 class="media-heading"><?php echo $message->user->name; ?></h5>
+                    <p><?php echo $message->body; ?></p>
+                    <div class="text-muted"><small>Posted <?php echo $message->created_at->diffForHumans(); ?></small></div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+
+        <h2>Add a new message</h2>
+        <?php echo Form::open(['route' => ['messages.update', $thread->id], 'method' => 'PUT']); ?>
+
+        <!-- Message Form Input -->
+        <div class="form-group">
+            <?php echo Form::textarea('message', null, ['class' => 'form-control']); ?>
+
+        </div>
+
+        <?php if($users->count() > 0): ?>
+        <div class="checkbox">
+            <?php foreach($users as $user): ?>
+                <label title="<?php echo $user->name; ?>"><input type="checkbox" name="recipients[]" value="<?php echo $user->id; ?>"><?php echo $user->name; ?></label>
+            <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
+
+        <!-- Submit Form Input -->
+        <div class="form-group">
+            <?php echo Form::submit('Submit', ['class' => 'btn btn-primary form-control']); ?>
+
+        </div>
+        <?php echo Form::close(); ?>
+
+    </div>
+        </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

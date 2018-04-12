@@ -1,0 +1,39 @@
+<?php $__env->startSection('content'); ?>
+<?php
+$user = User::where('username', '=', $username)->first();
+?>
+<div class="profile">
+    <div class="profile-cover-img" style="background-image: url('<?php echo asset($user->getPhoto($user->cover_photo)->large.'')?>');">
+    <div class="profile-name">
+    <?php echo $__env->make('profile.profile-name', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div> 
+    </div>
+    <div class="profile-inner">
+    <div class="profile-data" style="padding-left: 0;">
+        <span class="header">Published Articles</span><p></p>
+            <?php if(Article::where('author_id', '=', $user->id)->where('status', '=', '4')->count() == 0): ?>
+            <strong><?php echo $user->username; ?> has not submitted any content.</strong>
+            <?php else: ?>
+            <?php foreach($articles = Article::where('author_id', '=', $user->id)->where('status', '=', '4')->orderBy('created_at', 'DESC')->paginate(10) as $article): ?>
+            <a href="<?php echo URL::route('article', array('id' => $article->id, 'stripped_title' => $article->stripped_title)); ?>"> 
+           <div class="media">
+              <div class="media-left media-middle">
+                <img class="media-object" width="100" height="100" src="<?php echo asset($article->getPhoto($article->cover_photo)->thumb); ?>" alt="...">
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"><?php echo e($article->title); ?></h3>
+                <?php echo e($article->description); ?><p></p>
+                <b>Posted:</b> <?php echo $article->author->created_at->format('d/m/Y'); ?>
+
+              </div>
+            </div>
+            </a><p></p>
+            <?php endforeach; ?>
+            <?php echo $articles->links(); ?>
+
+            <?php endif; ?>
+    </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

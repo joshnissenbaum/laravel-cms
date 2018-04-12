@@ -1,0 +1,28 @@
+<?php $__env->startSection('content'); ?>
+<div class="forum-wrapper">
+
+<table class="forum">
+  <tr class="top-bar">
+    <th style="padding-left: 5px;" >Category</th>
+    <th>Latest</th>
+    <th class="topics">Topics</th>
+  </tr>
+    <?php foreach(ForumCategory::all() as $cat): ?>
+  <tr class="sect">
+    <td class="category" style="border-color: <?php echo $cat->colour_code; ?>;">
+    <span class="title"><a href="<?php echo URL::route('forumcategory', array('id' => $cat->id)); ?>"><?php echo $cat->name; ?></a></span><br>
+    <span class="desc"><?php echo $cat->description; ?></span></td>
+    <td style="padding-top: 10px; padding-bottom: 10px;">
+        <?php foreach($cat->thread()->orderBy('created_at', 'desc')->take(3)->get() as $thread): ?>
+        <a href="<?php echo URL::route('forumpost', array('$id' => $thread->id, '$stripped_title' => $thread->stripped_title)); ?>"><span class="desc-title"><?php echo $thread->title; ?></span></a>
+        <span class="desc-date">Posted by <a href="<?php echo URL::route('profile', array('username' => $thread->author->username)); ?>"><?php echo $thread->author->username; ?></a> | <?php echo $thread->created_at->format('j/m/Y g:ia'); ?></span>
+        <?php endforeach; ?>
+    </td>
+      <td class="topics"><span class="nv-cat-value"><?php echo $cat->thread->count(); ?></span> <span class="nv-cat-time">/ threads</span><br><span class="nv-cat-value"><?php echo $cat->countPosts($cat->id); ?></span>
+      <span class="nv-cat-time">/ posts</span></td>
+  </tr>
+    <?php endforeach; ?>
+</table>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

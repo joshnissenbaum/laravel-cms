@@ -1,0 +1,41 @@
+<?php $__env->startSection('content'); ?>
+<?php $user = User::where('username', '=', $username)->first(); ?>
+<div class="profile">
+    <div class="profile-cover-img" style="background-image: url('<?php echo asset($user->getPhoto($user->cover_photo)->large.'')?>');">
+    <div class="profile-name">
+    <?php echo $__env->make('profile.profile-name', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div> 
+    </div>
+    <div class="profile-inner">
+    <div class="profile-data" style="padding-left: 0; padding-right: 0;">
+        <span class="header">New Message
+        </span><p></p>
+    <div class="row">
+        <div class="col-md-12">
+           <?php echo Form::open(array('action' => 'ProfileController@postSendMessage', 'files' => 'true')); ?>
+
+            <?php if($errors->has()): ?>
+           <p></p>
+            <div class="alert alert-danger">
+                <?php foreach($errors->all() as $error): ?>
+                    <?php echo $error; ?><br>        
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+            <div class="form-group" style="margin-top: 15px;">
+                <label for="exampleInputEmail1">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="" value="<?php echo Input::old('title'); ?>">
+            </div>
+            <div class="form-group" style="margin-top: 15px;">
+                <label for="exampleInputEmail1">Message</label>
+                <textarea name="message" class="form-control" placeholder="Send a message..."></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-send"></span>&nbsp; Send</button>
+            <?php echo Form::close(); ?>
+
+        </div>       
+    </div>
+    </div>
+    </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

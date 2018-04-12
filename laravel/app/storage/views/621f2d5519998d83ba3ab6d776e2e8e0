@@ -1,0 +1,37 @@
+<?php $__env->startSection('content'); ?>
+<?php $user = User::where('username', '=', $username)->first(); ?>
+<div class="profile">
+    <div class="profile-cover-img" style="background-image: url('<?php echo asset($user->getPhoto($user->cover_photo)->large.'')?>');">
+    <div class="profile-name">
+       <?php echo $__env->make('profile.profile-name', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div> 
+    </div>
+     <div class="profile-inner">
+    <div class="profile-data" style="padding-left: 0; padding-right: 0;">
+        <span class="header">Messages
+        <?php if($user->id == Auth::user()->id): ?>
+            <a href="<?php echo URL::route('messages.create', array('username' => $username)); ?>"><button class="btn btn-primary" type="button" style="position: absolute; right: 0;">
+                <span class="glyphicon glyphicon-plus"></span>&nbsp; New Message</button></a>
+            <?php endif; ?>
+        </span><p></p>
+    <?php if(Session::has('error_message')): ?>
+        <div class="alert alert-danger" role="alert">
+            <?php echo Session::get('error_message'); ?>
+
+        </div>
+    <?php endif; ?>
+        
+    <div class="row">
+    <div class="col-md-5">
+        <?php echo $__env->make('profile.messenger.threads', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div> 
+    
+    <div class="col-md-7">
+        Select a conversation on the left hand side.
+    </div>
+</div>
+</div>
+</div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

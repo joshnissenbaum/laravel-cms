@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="64f9d96b-8e69-4f8b-9c4e-a20dc2ff473d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/00ec9ccb9e9ec4d2a7c7276239081581273f7716" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/0269fa32425ce3bbeb1038d8b5e1752f724b889d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/052ccf65a3c36fee2961799edddabc43217ab7c7" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/0a0b66360f2d257fd18a6a2c3c8756412a32d498" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/0b3ee3a86827df8ed36a37dd4c959bea22eecb2b" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/0c50e0228ed2df8ca15bf4b0e89748ddc9abd8ea" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/0c5d4d21f0bd60ecc4ffa5c36e8e1ddc8f5b6c16" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/1075a357d8628c9ef4d6b949a662d753624f36b4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/18292fabb4bd8501ce405d5ee9eb2408b044591c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/188afa9f28d73d23a56e4593446ef1d3d40bf8de" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/1b2d15966be8fa46455a0de1b05b3f71a7714f5c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/1b779da12df5568405434004886ad6408b5c9080" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/1b8d46338688a43d183cf77a4827e110528c4cf5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/3319df0b006bd2c66cb38ba7b9259d0f457315e3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/4082e7d89be383be814293e7d6bd818d51b3b052" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/4899f97ec7c73bf88a256b7a1f6124cf3fae6d87" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/4d7ea6d37c67eb5c89bd2f3f2b194db921c6100b" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/4ddc2a418a44a05fa396f6213bf3241caf9c6619" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/4e0126f154d4b2fcf1ca10d71e295593afab9b48" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/566b826a1df5c7e70bafed0b0a9eea2b4d38c9db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/5b3b0d3a6e33071d83116c1850be27098ad750b1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/5ed2b5612ab41f13bff60ec364d7b327e697e213" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/627b549cfdc5b538f6fb83c9855a10e738901b6f" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/6354e99a49aa8985fd3a77df9d459ef607015f32" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/68cd02cdeece69302defa2d4abc434ac1deb68d0" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/6d6404548d67d080fadaa0ca7ee77327b5f51e6d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/6e5fc42479fc050e21cc0ed44cd4f0bb1f0524c5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/78a891f915f6de1c69c889b2ecf47c7af8f538eb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/7a3a7613bff4363f6708abc085f14464fb82bf6a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/7c1c90fdb9fb6a4839ce967eb0badc4be63e4b34" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/7d04486b14c54af16fa37e5a141a889abaa42707" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/828715af08f5a3ab192eb66abfdde98d642dc7e7" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/832f2dc41aed7d072921ef28a3accb251a6a6109" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/8421c6f76e0d6fe0e69ffa4d46a94146dbeab9ee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/897aa9d219292277614eed475de2f0fc1a3ad13e" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/8a484fd74d55ec818565d1b4e29916ce0eaee870" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/8af30c9fe40f56ba324f78a67b1005efd9bec409" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/90846b502f7e6054137fb2cce834ac36cad652c4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/90e70aaecee00fc777fb8bc9dcaeb517f5d77803" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/ae62ec08e14060851d1abb75d867829e3055d86c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/c156cd57362323e69739e86d2c8c70b652fc22e0" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/c55b860311e71f922d67ff1b835457fcf8095b6d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/d89c1e933e14a64e0f1ff82e4d25b7859e5dbee5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/e01c0b896bbea400a10cd3874866459ae6d97fca" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/e720dafd24c763215eb5cbe6a9d332ff15a75665" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/e78a9753c3afcc91f3baeff4b4d4cf734f3d1ff7" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/e7fae656cbfff040e39e6cec506b8c5b7ab6a21f" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/ea781077326a23779ff820d3529f41e44bd23638" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/app/storage/sessions/f09ccc2a12e1262f8b67ea83c22d3114e976a660" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/e30aus (2).sql" afterPath="$PROJECT_DIR$/e30aus.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/misc/location-init.js" afterPath="$PROJECT_DIR$/js/misc/location-init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/misc/summernote-init.js" afterPath="$PROJECT_DIR$/js/misc/summernote-init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/config/database.php" afterPath="$PROJECT_DIR$/laravel/app/config/database.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/storage/logs/laravel.log" afterPath="$PROJECT_DIR$/laravel/app/storage/logs/laravel.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/storage/views/5458bbf545d46a74241a32c95d09c30c" afterPath="$PROJECT_DIR$/laravel/app/storage/views/5458bbf545d46a74241a32c95d09c30c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/storage/views/7152c4896c7280fb6d589c2a582a7a87" afterPath="$PROJECT_DIR$/laravel/app/storage/views/7152c4896c7280fb6d589c2a582a7a87" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/storage/views/e0f7bb6023d156b53652493c0f01d7f5" afterPath="$PROJECT_DIR$/laravel/app/storage/views/e0f7bb6023d156b53652493c0f01d7f5" />
+    </list>
+    <ignored path="baked.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="baked" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/laravel/app/helpers.php" />
+        <option value="$PROJECT_DIR$/laravel/app/views/home/galleries.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/views/profile/home.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/views/pages/classified-results.blade.php" />
+        <option value="$PROJECT_DIR$/js/misc/location-init.js" />
+        <option value="$PROJECT_DIR$/laravel/app/config/database.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="baked" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e30aus" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="baked" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e30aus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="baked" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e30aus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="baked" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e30aus" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="laravel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="SearchEverywhereHistory" value="&#10;Am" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="appearance" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\baked\laravel\app\views\main" />
+      <recent name="C:\xampp\htdocs\baked\images" />
+      <recent name="C:\xampp\htdocs\baked\laravel\app\views\layouts" />
+      <recent name="C:\xampp\htdocs\baked\laravel\app\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\baked\laravel\app\controllers" />
+      <recent name="C:\xampp\htdocs\baked\laravel\app\models" />
+      <recent name="C:\xampp\htdocs\baked\laravel\app\views\errors" />
+      <recent name="C:\xampp\htdocs\baked\laravel\app\views\submit" />
+      <recent name="C:\xampp\htdocs\baked\laravel\app\views\layouts" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64f9d96b-8e69-4f8b-9c4e-a20dc2ff473d" name="Default" comment="" />
+      <created>1414565062851</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1414565062851</updated>
+      <workItem from="1464950324006" duration="476000" />
+      <workItem from="1468326311765" duration="17000" />
+      <workItem from="1469188956924" duration="124000" />
+      <workItem from="1469411528534" duration="26000" />
+      <workItem from="1471480168073" duration="19000" />
+      <workItem from="1474542641784" duration="156000" />
+      <workItem from="1474542832719" duration="8000" />
+      <workItem from="1479646448334" duration="123000" />
+      <workItem from="1479646605951" duration="132000" />
+      <workItem from="1479646854943" duration="261000" />
+      <workItem from="1479647391707" duration="19000" />
+      <workItem from="1479647434877" duration="787000" />
+      <workItem from="1504761959581" duration="182000" />
+      <workItem from="1523493353665" duration="64000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2394000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20535715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/main/popular-module.blade.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="13" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/errors/404.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="75" column="63" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/article/comments.blade.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/models/Report.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/controllers/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/controllers/SubmitController.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/models/Visit.php" />
+    <entry file="file://$PROJECT_DIR$/css/plugins/morris.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/models/Comment.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/models/StaffMessage.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/profile/profile-display.blade.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/profile/activity.blade.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/profile/articles.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="131" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/controllers/AdminController.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/layouts/index.blade.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/profile/edit-profile.blade.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/layouts/article.blade.php" />
+    <entry file="file://$PROJECT_DIR$/js/user-profile.js" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/layouts/admin.blade.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/layouts/profile.blade.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/admin/adduser.blade.php" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/admin/main.blade.php" />
+    <entry file="file://$PROJECT_DIR$/css/admin.css" />
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="1037" column="9" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/admin.js" />
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/home/trending.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="16" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/models/Gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/home/galleries.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="132" lean-forward="false" selection-start-line="10" selection-start-column="132" selection-end-line="10" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/pages/galleries.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1188">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/forum/forum_post.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/forum/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/profile/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/forum/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/views/pages/classified-results.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/controllers/NavController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/controllers/GalleryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="56" column="49" lean-forward="false" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/misc/typeahead.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/misc/uploader-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/misc/slider-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/misc/summernote-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-897">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/misc/main-hover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/misc/location-init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="57" column="34" lean-forward="false" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/controllers/ForumController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/controllers/ClassifiedsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1462">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/controllers/ArticleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1218">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/controllers/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2796">
+          <caret line="33" column="9" lean-forward="false" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

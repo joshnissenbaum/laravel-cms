@@ -1,0 +1,43 @@
+<?php $__env->startSection('content'); ?>
+<?php
+$user = User::where('username', '=', $username)->first();
+?>
+<div class="profile">
+    <div class="profile-cover-img" style="background-image: url('<?php echo asset($user->getPhoto($user->cover_photo)->large.'')?>');">
+    <div class="profile-name">
+    <?php echo $__env->make('profile.profile-name', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div> 
+    </div>
+    <div class="profile-inner">
+    <div class="profile-data" style="padding-left: 0; padding-right: 0;">
+        <span class="header">My Galleries
+            <?php if($user->id == Auth::user()->id): ?>
+            <a href="<?php echo URL::route('profile.addgallery', array('username' => $username)); ?>"><button class="btn btn-primary" type="button" style="position: absolute; right: 0;">
+                <span class="glyphicon glyphicon-picture"></span>&nbsp; Create Gallery</button></a>
+            <?php endif; ?>
+        </span><p></p>
+            <?php if(Gallery::where('user_id', '=', $user->id)->count() == 0): ?>
+            <strong><?php echo $user->username; ?> does not have any galleries to display.</strong>
+            <?php else: ?>
+            <div class="row">
+            <?php foreach($galleries = Gallery::where('user_id', '=', $user->id)->orderBy('created_at', 'DESC')->get() as $gallery): ?>
+            <a href="<?php echo URL::route('gallery', array('id' => $gallery->id)); ?>">
+            <div class="col-md-3" style="margin-bottom: 20px;">
+                <div class="profile-gallery-item">
+                   <div class="profile-gallery-img" style="background-image: url('<?php echo asset($gallery->getPhoto($gallery->displayphoto_id)->mid); ?>')">
+                    </div>
+                <div class="profile-gallery-info">
+                    <span style="font-size: 14px; font-weight: bold;" href="#"><?php echo $gallery->name; ?></span><br>
+                    Created on <?php echo $gallery->created_at->format('j/m/Y'); ?> &middot; <?php echo GalleryPhoto::where('gallery_id', '=', $gallery->id)->count(); ?> photos
+                    </div>
+                </div>    
+            </div>
+            </a>
+            <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+    </div>
+    </div>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,32 @@
+   <div class="trending-articles">
+      <div class="column-widget">
+    <header class="header">
+    <h2><img width="20" height="auto" src="<?php echo asset('images/trending.svg')?>">&nbsp; Trending Forum Posts</h2></header>
+    </div>  
+    <div class="tren-wrapper">
+            <?php foreach(ForumThread::TrendingPosts()->get()->take(8) as $thread): ?>
+             <a href="<?php echo URL::route('forumpost', array('$id' => $thread->id)); ?>">
+            <div class="tren-item">
+                <div class="tren-item-img" style="background-image: url('<?php echo asset($thread->getPhoto($thread->photo)->mid)?>');">
+                </div>
+                <div class="tren-item-text">
+                <?php echo $thread->title; ?>
+
+                </div>
+                  <div class="tren-item-desc">
+                  <?php $desc = Str::limit($thread->post()->first()->body, 100); ?>
+                  <?php echo BBCode::stripBBCodeTags($desc); ?>
+
+               
+                </div>
+                <div class="tren-item-author">
+                Posted <?php echo $thread->created_at->format('d F'); ?> by <?php echo $thread->author->username; ?>
+
+                 
+                </div>
+               
+            </div>
+            </a>
+            <?php endforeach; ?>
+        </div>
+</div>

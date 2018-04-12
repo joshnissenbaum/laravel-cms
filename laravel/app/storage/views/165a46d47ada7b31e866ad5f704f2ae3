@@ -1,0 +1,136 @@
+<?php $__env->startSection('content'); ?>
+<div class="articles">
+   <div class="column-widget">
+    <header class="header">
+    <h2><span class="glyphicon glyphicon-star" aria-hidden="true"></span>&nbsp;Most Popular</h2>
+    <div class="dropdown" style="float: right;">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: grey; border-color: transparent;">
+        <span class="caret" aria-hidden="true"></span>
+        &nbsp;Article Categories
+        </button>
+        <ul class="dropdown-menu">
+        <?php foreach(ArticleCategory::all() as $cat): ?>
+            <li><a href="<?php echo URL::route('article.category', array('id' => $cat->id)); ?>"><?php echo $cat->name; ?></a></li>
+        <?php endforeach; ?>
+        </ul>
+    </div>
+    </header>
+    </div>
+    <?php $articles = Article::MostViewedArticles()->where('status', '=', '4')->take(3)->get(); ?>
+    <?php foreach($articles as $article): ?>
+    <a href="<?php echo URL::route('article', array('id' => $article->id, 'stripped_title' => $article->stripped_title)); ?>"> 
+    <div class="article animated fadeInUp">
+        <div class="article-img">
+        <div class="article-img-inner" style="background-image: url('<?php echo asset($article->getPhoto($article->cover_photo)->mid)?>');">
+        </div>
+        </div>
+    <div class="article-info">
+        <div class="article-title"><?php echo e(@strip_tags(Str::limit($article->title, 50))); ?></div>
+        <?php echo e(@strip_tags(Str::limit($article->description, 100))); ?>
+
+        <div class="article-author">Posted by <?php echo $article->author->username; ?> on  <?php echo $article->created_at->format('d/m/Y'); ?></div>
+    </div>
+    </div>
+    </a>
+    <?php endforeach; ?>
+    <div class="trending-articles">
+    <div class="column-widget">
+    <header class="header">
+    <h2><span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span>&nbsp;Trending</h2></header>
+    </div>
+    <?php foreach(Article::TrendingArticles()->where('status', '=', '4')->whereNotIn('articles.id', array_pluck($articles, 'id'))->take(6)->get() as $article): ?>
+    <a href="<?php echo URL::route('article', array('id' => $article->id, 'stripped_title' => $article->stripped_title)); ?>"> 
+    <div class="article animated fadeInUp">
+        <div class="article-img">
+        <div class="article-img-inner" style="background-image: url('<?php echo asset($article->getPhoto($article->cover_photo)->mid)?>');">
+        </div>
+        </div>
+    <div class="article-info">
+        <div class="article-title"><?php echo e(@strip_tags(Str::limit($article->title, 50))); ?></div>
+        <?php echo e(@strip_tags(Str::limit($article->description, 100))); ?>
+
+        <div class="article-author">Posted by <?php echo $article->author->username; ?> on  <?php echo $article->created_at->format('d/m/Y'); ?></div>
+    </div>
+    </div>
+    </a>
+    <?php endforeach; ?>
+    </div>  
+    
+    <div class="categorised-articles">
+    <?php foreach(ArticleCategory::all() as $category): ?>
+    <div class="categorised-article">
+     <div class="column-widget">
+        <header class="header">
+            <a href="<?php echo URL::route('article.category', array('id' => $category->id)); ?>"><h2><?php echo $category->name; ?></h2></a></header>
+     </div>
+     <?php $size = $category->size; ?>
+     <?php if($size == 6): ?>
+   <?php $articles = Article::MostViewedArticles()->where('status', '=', '4')->where('category_id', '=', $category->id)->take(3)->get(); ?>
+    <?php foreach($articles as $article): ?>
+    <a href="<?php echo URL::route('article', array('id' => $article->id, 'stripped_title' => $article->stripped_title)); ?>"> 
+    <div class="article">
+        <div class="article-img">
+        <div class="article-img-inner" style="background-image: url('<?php echo asset($article->getPhoto($article->cover_photo)->mid)?>');">
+        </div>
+        </div>
+    <div class="article-info">
+        <div class="article-title"><?php echo e(@strip_tags(Str::limit($article->title, 50))); ?></div>
+        <?php echo e(@strip_tags(Str::limit($article->description, 100))); ?>
+
+        <div class="article-author">Posted by <?php echo $article->author->username; ?> on  <?php echo $article->created_at->format('d/m/Y'); ?></div>
+    </div>
+    </div>
+    </a>
+   <?php endforeach; ?>
+    <?php $articles = Article::TrendingArticles()->where('status', '=', '4')->where('category_id', '=', $category->id)->whereNotIn('articles.id', array_pluck($articles, 'id'))->take(3)->get(); ?>
+    <?php foreach($articles as $article): ?>
+    <a href="<?php echo URL::route('article', array('id' => $article->id, 'stripped_title' => $article->stripped_title)); ?>"> 
+    <div class="article">
+        <div class="article-img">
+        <div class="article-img-inner" style="background-image: url('<?php echo asset($article->getPhoto($article->cover_photo)->mid)?>');">
+        </div>
+        </div>
+    <div class="article-info">
+        <div class="article-title"><?php echo e(@strip_tags(Str::limit($article->title, 50))); ?></div>
+        <?php echo e(@strip_tags(Str::limit($article->description, 100))); ?>
+
+        <div class="article-author">Posted by <?php echo $article->author->username; ?> on  <?php echo $article->created_at->format('d/m/Y'); ?></div>
+    </div>
+    </div>
+    </a>
+    <?php endforeach; ?>
+     <?php else: ?>
+       <?php $articles = Article::TrendingArticles()->where('status', '=', '4')->where('category_id', '=', $category->id)->take($size)->get(); ?>
+    <?php foreach($articles as $article): ?>
+    <a href="<?php echo URL::route('article', array('id' => $article->id, 'stripped_title' => $article->stripped_title)); ?>"> 
+    <div class="article">
+        <div class="article-img">
+        <div class="article-img-inner" style="background-image: url('<?php echo asset($article->getPhoto($article->cover_photo)->mid)?>');">
+        </div>
+        </div>
+    <div class="article-info">
+        <div class="article-title"><?php echo e(@strip_tags(Str::limit($article->title, 50))); ?></div>
+        <?php echo e(@strip_tags(Str::limit($article->description, 100))); ?>
+
+        <div class="article-author">Posted by <?php echo $article->author->username; ?> on  <?php echo $article->created_at->format('d/m/Y'); ?></div>
+    </div>
+    </div>
+    </a>
+    <?php endforeach; ?>          
+     <?php endif; ?>
+    <?php endforeach; ?>
+    </div>
+    </div>   
+</div>
+<?php $__env->stopSection(); ?>
+        
+
+        
+        
+
+  
+    
+    
+    
+
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

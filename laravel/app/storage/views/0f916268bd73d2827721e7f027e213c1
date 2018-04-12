@@ -1,0 +1,47 @@
+<?php $__env->startSection('content'); ?>
+<div class="articles">
+
+    <div class="grey-bg-hdr" style="padding: 0; padding-left: 10px; padding-right: 3px;">
+    <div class="main-header">
+        <a href="<?php echo URL::previous(); ?>"><h1><a href="<?php echo URL::route('articles'); ?>"><span class="glyphicon glyphicon-th-list"></span>&nbsp; Articles</a> &middot;&nbsp;</h1>
+    </div>
+    </div>
+    <div class="grey-bg-hdr" style="padding: 0; background: none;">
+    <div class="main-header">
+        <h1>&nbsp;<?php echo $category->name; ?></h1>
+    </div>
+    </div>
+    <hr style="margin-bottom: 5px;">   
+    <?php $articles = Article::MostViewedArticles()->where('category_id', '=', $category->id)->where('status', '=', '4')->get(); ?>
+    <?php if($articles->count() == 0): ?>
+    <p></p><div class="alert alert-info">There have been no articles posted in this category yet.</div>
+    <?php endif; ?>
+    <?php foreach($articles as $article): ?>
+    <a href="<?php echo URL::route('article', array('id' => $article->id, 'stripped_title' => $article->stripped_title)); ?>"> 
+    <div class="article">
+        <div class="article-img">
+        <div class="article-img-inner" style="background-image: url('<?php echo asset($article->getPhoto($article->cover_photo)->mid)?>');">
+        </div>
+        </div>
+    <div class="article-info">
+        <div class="article-title"><?php echo e(@strip_tags(Str::limit($article->title, 50))); ?></div>
+        <?php echo e(@strip_tags(Str::limit($article->description, 100))); ?>
+
+        <div class="article-author">Posted by <?php echo $article->author->username; ?> on  <?php echo $article->created_at->format('d/m/Y'); ?></div>
+    </div>
+    </div>
+    </a>
+    <?php endforeach; ?>
+</div>
+<?php $__env->stopSection(); ?>
+        
+
+        
+        
+
+  
+    
+    
+    
+
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

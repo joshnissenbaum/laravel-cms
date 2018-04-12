@@ -1,0 +1,9 @@
+<?php $__env->startSection('content'); ?>
+   <?php echo $__env->make('home.start', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+   <?php echo $__env->make('home.articles_news', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+   <?php echo $__env->make('home.trending', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+   <?php echo $__env->make('home.galleries', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+   <?php echo $__env->make('home.sale_posts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+   <?php echo $__env->make('home.end', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

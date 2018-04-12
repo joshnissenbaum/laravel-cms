@@ -1,0 +1,9 @@
+
+             <div class="writer-sidebar" style="width: 25%;">
+         <ul class="nav nav-pills nav-stacked">
+             <li id="submission-center" <?php if($nav == 'profile.writer.home') { echo'class="active"'; } ?> role="presentation"><a href="<?php echo URL::route('profile.writer.home', array('username' => $user->username)); ?>">Submission Center <span class="badge">0</span></a></li>
+             <li id="new-submission" <?php if($nav == 'profile.writer.new') { echo'class="active"'; } ?>  role="presentation"><a href="<?php echo URL::route('profile.writer.new', array('username' => $user->username)); ?>">
+             Post an Article</a></li>
+             <li id="faq-support" <?php if($nav == 'profile.writer.faq') { echo'class="active"'; } ?> role="faq-support"><a href="<?php echo URL::route('profile.writer.faq', array('username' => $user->username)); ?>">FAQ & Support</a></li>
+         </ul>
+        

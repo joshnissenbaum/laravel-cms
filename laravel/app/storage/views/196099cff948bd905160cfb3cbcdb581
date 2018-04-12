@@ -1,0 +1,81 @@
+<?php $__env->startSection('content'); ?>
+    <div class="forum-category">
+        <div class="top-bar">
+            <div class="top-bar-cell" style="width: 5%;">
+
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: grey; border-color: transparent;">
+                       <span class="caret" aria-hidden="true"></span>&nbsp; 
+                        <?php echo $category->name; ?>
+
+                        </button>
+                    <ul class="dropdown-menu">
+                        <?php foreach(ForumCategory::where('id', '!=', $category->id)->get() as $cat): ?>
+                        <li><a href="<?php echo URL::route('forumcategory', array('id' => $cat->id)); ?>"><?php echo $cat->name; ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            </div>
+            <div class="top-bar-cell" style="width: 5%; padding-left: 10px;">
+
+                <a href="<?php echo URL::route('forum'); ?>">
+                    <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-list" aria-hidden="true"></span>&nbsp; Forum</button>
+                </a>
+
+            </div>
+            <div class="top-bar-cell" style="width: 100%;">
+                <?php if(Auth::check()): ?>
+                <div class="forum-reply">
+                    <a href="<?php echo URL::route('forum.createthread', array('id' => $category->id)); ?>">
+                       <button type="button" class="btn btn-primary btn-md">
+                           <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Create Thread
+                    </button>
+                    </a>
+                </div> <?php endif; ?>
+            </div>
+        </div>
+
+
+
+
+
+        <table class="forum-cat-table">
+            <tr class="top">
+                <th style="width: 60%;" style=""><span style="margin-left: 10px;">Topic</span></th>
+                <th>Posted By</th>
+                <th>Replies</th>
+                <th>Views</th>
+                <th>Activity</th>
+            </tr>
+            <?php foreach(ForumThread::where('category_id', '=', $category->id)->orderBy('sticky', 'DESC')->orderBy('created_at', 'DESC')->get() as $thread): ?>
+            <tr>
+                <td class="topic-title">
+                <a href="<?php echo URL::route('forumpost', array('$id' => $thread->id, 'stripped_title' => $thread->stripped_title)); ?>">
+                <img src="<?php echo asset($thread->getPhoto($thread->photo)->thumb)?>" width="30px" height="30px">
+                <?php if($thread->sticky == 1): ?> <strong><span class="glyphicon glyphicon-pushpin"></span>&nbsp; <?php endif; ?>
+                <?php echo $thread->title; ?></a></td>
+                <?php if($thread->sticky == 1): ?> </td></strong> <?php endif; ?>
+                <td valign="middle">
+                    <a href="<?php echo URL::route('profile', array('username' => $thread->author->username)); ?>">
+        <img width="30px" height="auto" src= "<?php echo asset($thread->getPhoto($thread->author->profile_photo)->thumb)?>"><span class="author"><?php echo $thread->author->username; ?></span>
+          </a>
+                </td>
+                <td><?php echo ForumPost::where('thread_id', '=', $thread->id)->count()-1; ?></td>
+                <td><?php echo ForumThreadView::where('thread_id', '=', $thread->id)->count(); ?></td>
+                <td><?php echo ForumPost::where('thread_id', '=', $thread->id)->orderBy('created_at', 'DESC')->first()->created_at->format('F j'); ?></td>
+            </tr>
+            <?php endforeach; ?>
+
+
+
+        </table>
+        <?php if(Auth::check()): ?>
+        <div class="forum-reply">
+            <a href="<?php echo URL::route('forum.createthread', array('id' => $category->id)); ?>">
+                <button id="create-thread" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Create Thread</button>
+            </a>
+        </div>
+        <?php endif; ?>
+    </div>
+    <?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
