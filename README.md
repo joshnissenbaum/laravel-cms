@@ -1,10 +1,12 @@
 # Laravel CMS
 
-This project can  be used for the generation of a content management system and includes the front-end for a car enthusiast community. The project includes functionality such as: user profiles, articles and commenting, a photo gallery, real-time messaging and conversations with PusherJS, 
+This project can  be used for the generation of a content management system and includes the front-end for a car enthusiast community. The project includes functionality such as: user profiles, articles and commenting, a photo gallery, real-time messaging and conversations with PusherJS.
+
+Users can be configured as administrators and accept/deny articles which are posted to the system. These articles will display on the homepage and are organised in a trending algorithm. Articles with the most views (trending) will display above others on the front page. The same algorithm applies to the photo gallery which shows various photos that users have uploaded.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prerequisites
 
@@ -55,6 +57,10 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 * **Joshua Nissenbaum** - Full-Stack Development
 * **Jared Duncan** - UI/UX Design
 
+## To-Do List
+
+* **Migrate to Laravel 5.5** as PHP functions from version 5 have been depreciated
+* **Code formatting and optimisation** - Bundle HTTP POST requests and format to PSR-2 style 
 
 ## License
 
